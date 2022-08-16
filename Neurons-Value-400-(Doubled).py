@@ -16,6 +16,7 @@ resume = False # resume from previous checkpoint?
 render = False
 
 
+
 # model initialization
 D = 80 * 80 # input dimensionality: 80x80 grid
 if resume:
