@@ -1,16 +1,23 @@
+#BALRAJ-SINGH-c0852590
+#Neurons = 800
+#Learning_rate = 1e-4
+
 """ Trains an agent with (stochastic) Policy Gradients on Pong. Uses OpenAI Gym. """
 import numpy as np
 import _pickle as pickle
 import gym
 
+
 # hyperparameters
-H = 200 # number of hidden layer neurons
+H = 800 # number of hidden layer neurons
 batch_size = 10 # every how many episodes to do a param update?
 learning_rate = 1e-4
 gamma = 0.99 # discount factor for reward
 decay_rate = 0.99 # decay factor for RMSProp leaky sum of grad^2
 resume = False # resume from previous checkpoint?
 render = False
+
+
 # model initialization
 D = 80 * 80 # input dimensionality: 80x80 grid
 if resume:
@@ -133,8 +140,6 @@ while True:
 
   if reward != 0: # Pong has either +1 or -1 reward exactly when game ends.
     print ('ep %d: game finished, reward: %f' % (episode_number, reward) + ('' if reward == -1 else ' !!!!!!!!'))
-
-
 
 
 
